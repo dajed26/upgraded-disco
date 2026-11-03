@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jaderick N. Cuevas — Beyond the Code</title>
+  <meta name="description" content="Portfolio of Jaderick N. Cuevas, third-year BSIT student at the University of Cebu and aspiring developer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <canvas id="bgCanvas" aria-hidden="true"></canvas>
+
+  <!-- NAVIGATION -->
+  <header class="nav" id="nav">
+    <a href="#home" class="logo">JNC<span>.</span></a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#goals">Goals</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="clock" id="clock" aria-label="Current time">--:--:--</div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="floating-symbols" aria-hidden="true">
+        <span>&lt;/&gt;</span><span>{ }</span><span>01</span><span>SQL</span><span>#</span><span>=&gt;</span>
+      </div>
+      <div class="hero-text">
+        <p class="eyebrow mono">// beyond the code — get to know me</p>
+        <h1>HELLO, I'M<br /><span class="grad">JADERICK N. CUEVAS.</span></h1>
+        <p class="typing mono"><span id="typed"></span><span class="caret">|</span></p>
+        <p class="lead">A third-year BSIT student from Cebu City who loves figuring out how systems work — and then building new ones.</p>
+        <div class="btns">
+          <a href="#about" class="btn primary">Explore My World</a>
+          <a href="#skills" class="btn ghost">View My Skills</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="ring"></div>
+        <img src="C:\Users\PI714\Downloads\PORTFOLIO\jaderick-photo.webp" alt="Profile photo of Jaderick N. Cuevas" />
+      </div>
+      <a href="#about" class="scroll-indicator" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2 class="title reveal"><span class="mono">01.</span> About Me</h2>
+      <div class="about-grid">
+        <div class="about-img reveal">
+          <img src="https://placehold.co/480x560/0b1024/a78bfa?text=Jaderick" alt="Portrait of Jaderick (placeholder)" />
+        </div>
+        <div class="about-info">
+          <p class="reveal">I am a third-year BSIT student at the University of Cebu in Cebu City. I am passionate about technology, programming, and discovering how computer systems work. I enjoy building projects, solving problems, and continuously improving my technical skills. My goal is to become a skilled IT professional and create useful solutions through technology.</p>
+          <div class="cards">
+            <div class="glass reveal"><h3>🎓 Education</h3><p>BS Information Technology, Third Year — University of Cebu</p></div>
+            <div class="glass reveal"><h3>📍 Location</h3><p>Cebu City, Philippines</p></div>
+            <div class="glass reveal"><h3>🧠 Personality</h3><p>Curious, patient, and hands-on. I learn best by building.</p></div>
+            <div class="glass reveal"><h3>🚀 Ambition</h3><p>Aspiring IT Professional and Developer</p></div>
+          </div>
+          <button class="btn ghost reveal" id="moreBtn" aria-expanded="false" aria-controls="moreAbout">More About Me ↓</button>
+          <div class="more" id="moreAbout" hidden>
+            <p>When a program breaks, I want to know <em>why</em>. That curiosity pulled me from simple coding exercises into building full desktop systems, simulating how operating systems schedule processes, and configuring networks in Cisco Packet Tracer.</p>
+            <p>Outside class, I keep exploring new tools and technologies — and occasionally test my strategy skills in Dota 2.</p>
+          </div>
+          <div class="stats">
+            <div class="stat reveal"><b class="count" data-target="3">0</b><span>Year in BSIT</span></div>
+            <div class="stat reveal"><b class="count" data-target="5">0</b><span>Projects Built</span></div>
+            <div class="stat reveal"><b class="count" data-target="4">0</b><span>Languages Studied</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2 class="title reveal"><span class="mono">02.</span> My Technical Skills</h2>
+      <p class="sub reveal">Technologies I have studied and practiced — still learning every day.</p>
+      <div class="skills-grid">
+        <div class="glass skill-card reveal">
+          <h3>💻 Programming</h3>
+          <div class="bar"><label>Java</label><div><i data-w="70"></i></div></div>
+          <div class="bar"><label>C#</label><div><i data-w="55"></i></div></div>
+          <div class="bar"><label>JavaScript</label><div><i data-w="50"></i></div></div>
+          <div class="bar"><label>SQL</label><div><i data-w="60"></i></div></div>
+        </div>
+        <div class="glass skill-card reveal">
+          <h3>🌐 Web Development</h3>
+          <div class="bar"><label>HTML</label><div><i data-w="70"></i></div></div>
+          <div class="bar"><label>CSS</label><div><i data-w="60"></i></div></div>
+          <div class="bar"><label>JavaScript</label><div><i data-w="50"></i></div></div>
+        </div>
+        <div class="glass skill-card reveal">
+          <h3>🗄️ Database</h3>
+          <div class="bar"><label>Database Design</label><div><i data-w="60"></i></div></div>
+          <div class="bar"><label>SQL Queries</label><div><i data-w="60"></i></div></div>
+          <div class="bar"><label>Database Management</label><div><i data-w="50"></i></div></div>
+        </div>
+        <div class="glass skill-card reveal">
+          <h3>🔌 Networking</h3>
+          <div class="bar"><label>VLAN Configuration</label><div><i data-w="55"></i></div></div>
+          <div class="bar"><label>Router-on-a-Stick</label><div><i data-w="50"></i></div></div>
+          <div class="bar"><label>Cisco Packet Tracer</label><div><i data-w="60"></i></div></div>
+        </div>
+      </div>
+      <p class="note mono reveal">* Bars show my learning progress, not expert-level proficiency.</p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2 class="title reveal"><span class="mono">03.</span> My Projects</h2>
+      <div class="filters reveal" role="group" aria-label="Filter projects">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="java">Java</button>
+        <button class="chip" data-filter="csharp">C#</button>
+      </div>
+      <div class="projects-grid">
+        <article class="project glass reveal" data-tag="java" tabindex="0">
+          <div class="thumb t1"><span>₱ ledger</span></div>
+          <h3>Accounting Management System</h3>
+          <p>Developed using Java Swing. Includes transactions, journals, ledgers, and financial reports.</p>
+          <div class="tags"><span>Java</span><span>Swing</span><span>Desktop</span></div>
+        </article>
+        <article class="project glass reveal" data-tag="java" tabindex="0">
+          <div class="thumb t2"><span>$ bank</span></div>
+          <h3>Banking System</h3>
+          <p>Java OOP project demonstrating inheritance, encapsulation, abstraction, and polymorphism.</p>
+          <div class="tags"><span>Java</span><span>OOP</span></div>
+        </article>
+        <article class="project glass reveal" data-tag="java" tabindex="0">
+          <div class="thumb t3"><span>✓ tasks</span></div>
+          <h3>Student Planner</h3>
+          <p>Java Swing application that helps organize academic tasks and deadlines.</p>
+          <div class="tags"><span>Java</span><span>Swing</span></div>
+        </article>
+        <article class="project glass reveal" data-tag="java" tabindex="0">
+          <div class="thumb t4"><span>FCFS · SJF · SRTN</span></div>
+          <h3>CPU Scheduling Simulator</h3>
+          <p>Java application demonstrating FCFS, SJF, and SRTN scheduling algorithms.</p>
+          <div class="tags"><span>Java</span><span>Algorithms</span><span>OS</span></div>
+        </article>
+        <article class="project glass reveal" data-tag="csharp" tabindex="0">
+          <div class="thumb t5"><span>♛ × 8</span></div>
+          <h3>8 Queens Problem</h3>
+          <p>C# Windows Forms application demonstrating a classic problem-solving algorithm.</p>
+          <div class="tags"><span>C#</span><span>WinForms</span><span>Backtracking</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- INTERESTS -->
+    <section id="interests" class="section">
+      <h2 class="title reveal"><span class="mono">04.</span> When I'm Not Coding...</h2>
+      <div class="interests-grid">
+        <div class="glass interest reveal"><span class="icon">🎮</span><h3>Playing Dota 2</h3><p>Strategy, teamwork, and quick decisions.</p></div>
+        <div class="glass interest reveal"><span class="icon">🔭</span><h3>Exploring Technology</h3><p>Always checking out new tools and gadgets.</p></div>
+        <div class="glass interest reveal"><span class="icon">📚</span><h3>Learning Programming</h3><p>One new concept at a time.</p></div>
+        <div class="glass interest reveal"><span class="icon">🛠️</span><h3>Solving Computer Problems</h3><p>The fix-it person among friends.</p></div>
+        <div class="glass interest reveal"><span class="icon">💡</span><h3>Discovering IT</h3><p>Curious about how everything connects.</p></div>
+      </div>
+    </section>
+
+    <!-- GOALS -->
+    <section id="goals" class="section">
+      <h2 class="title reveal"><span class="mono">05.</span> Where I Want To Be.</h2>
+      <ol class="timeline">
+        <li class="reveal"><b>01</b> Become a professional software developer.</li>
+        <li class="reveal"><b>02</b> Improve my programming and problem-solving abilities.</li>
+        <li class="reveal"><b>03</b> Build useful applications.</li>
+        <li class="reveal"><b>04</b> Gain real-world IT experience.</li>
+        <li class="reveal"><b>05</b> Continuously learn new technologies.</li>
+      </ol>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <h2 class="title reveal"><span class="mono">06.</span> Let's Connect</h2>
+      <p class="sub reveal">Got an opportunity, a project, or just want to talk tech? Reach out.</p>
+      <div class="socials reveal">
+        <a href="mailto:jaderick.cuevas@gmail.com" class="glass social"><span>✉️</span>Email<small>jaderick.cuevas@gmail.com</small></a>
+        <a href="https://www.facebook.com/jaderick.n.cuevas" target="_blank" rel="noopener" class="glass social"><span>📘</span>Facebook<small>facebook.com/jaderick.n.cuevas</small></a>
+        <a href="https://github.com/your-username" target="_blank" rel="noopener" class="glass social"><span>🐙</span>GitHub<small>[your GitHub]</small></a>
+        <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener" class="glass social"><span>💼</span>LinkedIn<small>[your LinkedIn]</small></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Jaderick N. Cuevas · Built with HTML, CSS & JavaScript</footer>
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
